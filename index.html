@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+
+</head>
+
+<body>
+    <div class="container-fluid">
+        <br>
+
+        <div class="row">
+            <h1>Calculator</h1>
+        </div>
+
+        <br>
+        
+        <div class="row">
+            <p>
+            <p id="output">0</p>
+            </p>
+        </div>
+
+        <div class="row">
+            <t>
+                <button type="button" style="width: 50px; background-color: rgb(216, 245, 245); ">Deg</button>
+                <button value="" onclick="fact()" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">x!</button>
+                <button value="(" onclick="affichage('(')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">(</button>
+                <button value=")" onclick="affichage(')')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">)</button>
+                <button onclick="perc()" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">%</button>
+                <button onclick="reset()" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">AC</button>
+            </t>
+        </div>
+
+        <div class="row">
+            <t>
+                <button value="Math.sin" onclick="affichage('Math.sin')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245);">sin</button>
+                <button value="Math.log" onclick="affichage('Math.log')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245);">ln</button>
+                <button value="7" onclick="affichage('7')" type="button"
+                    style="width: 50px; background-color: rgb(158, 209, 226);">7</button>
+                <button value="8" onclick="affichage('8')" type="button"
+                    style="width: 50px; background-color: rgb(158, 209, 226);">8</button>
+                <button value="9" onclick="affichage('9')" type="button"
+                    style="width: 50px; background-color: rgb(158, 209, 226);">9</button>
+                <button value="/" onclick="affichage('/')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">/</button>
+            </t>
+        </div>
+
+        <div class="row">
+            <t>
+                <button value="Math.cos" onclick="affichage('Math.cos')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">cos</button>
+                <button value="Math.log" onclick="affichage('Math.log')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">log</button>
+                <button value="4" onclick="affichage('4')" type="button"
+                    style="width: 50px; background-color: rgb(158, 209, 226);">4</button>
+                <button value="5" onclick="affichage('5')" type="button"
+                    style="width: 50px; background-color: rgb(158, 209, 226);">5</button>
+                <button value="6" onclick="affichage('6')" type="button"
+                    style="width: 50px; background-color: rgb(158, 209, 226);">6</button>
+                <button value="*" onclick="affichage('*')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">*</button>
+            </t>
+        </div>
+
+        <div class="row">
+            <t>
+                <button value="Math.tan" onclick="affichage('Math.tan')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">tan</button>
+                <button value="Math.sqrt" onclick="affichage('Math.sqrt')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">&#8730;</button>
+                <button value="1" onclick="affichage('1')" type="button"
+                    style="width: 50px; background-color: rgb(158, 209, 226);">1</button>
+                <button value="2" onclick="affichage('2')" type="button"
+                    style="width: 50px; background-color: rgb(158, 209, 226);">2</button>
+                <button value="3" onclick="affichage('3')" type="button"
+                    style="width: 50px; background-color: rgb(158, 209, 226);">3</button>
+                <button value="-" onclick="affichage('-')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">-</button>
+            </t>
+        </div>
+
+        <div class="row">
+            <t>
+                <button value="Math.exp" onclick="affichage('Math.exp')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245);">EXP</button>
+                <button value="Math.pow" onclick="affichage('Math.pow')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245); ">x<sup>y</sup></button>
+                <button onclick="affichage('0')" type="button"
+                    style="width: 50px; background-color: rgb(158, 209, 226);">0</button>
+                <button value="," onclick="affichage(',')" type="button"
+                    style="width: 22px; background-color: rgb(158, 209, 226);">,</button>
+                <button value="." onclick="affichage('.')" type="button"
+                    style="width: 22px; background-color: rgb(158, 209, 226);">.</button>
+                <button onclick="result()" type="button"
+                    style="width: 50px; background-color: rgb(61, 61, 228);">=</button>
+                <button value="+" onclick="affichage('+')" type="button"
+                    style="width: 50px; background-color: rgb(216, 245, 245);">+</button>
+            </t>
+        </div>
+
+    </div>
+
+    <script>
+
+        function reset() {
+            document.getElementById("output").innerHTML = "0";
+        }
+
+        function zero() {
+            var value = document.getElementById("output").innerHTML;
+            if (value == "0") {
+                value = " "
+                document.getElementById("output").innerHTML = value;
+            }
+        }
+
+        function perc() {
+            var value = document.getElementById("output").innerHTML;
+            value = value / 100;
+            document.getElementById("output").innerHTML = value;
+        }
+
+        function affichage(value) {
+            zero()
+            document.getElementById("output").innerHTML += value;
+        }
+
+        function result() {
+            // For the calculation to work, you have to click on the formula you want 
+            // (cos, sin, tan, log, ln, exp, root) then put a parenthesis, 
+            // put the number and close the parenthesis
+            // then click on the equal
+
+            // For the others, like +,*,-,/ just do your equation
+            // then click on the equal 
+
+            // For the x^y, you have to do the same thing as for the first
+            // you just have to put a first number (x), a comma and the second number (y)
+            zero()
+            var equation = document.getElementById("output").innerHTML;
+            var solved = eval(equation);
+            document.getElementById("output").innerHTML = solved;
+        }
+
+        function fact() {
+            //For the calculation to work, you must first enter the number you want 
+            //and then click on the factorial key to display the result, 
+            //no need for the equal key.
+            zero()
+            var f = 1;
+            for (var i = 1; i <= document.getElementById("output").innerHTML; i++) {
+                f = f * i;
+            }
+            document.getElementById("output").innerHTML = f;
+        }
+
+    </script>
+
+</body>
+
+</html>
